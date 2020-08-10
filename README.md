@@ -2,15 +2,15 @@ Designed and developed a load balancer in Django which routes the requests from 
 
 Load balancer consists of 5 servers.
 
-First two servers belongs to the host www.hostaddress1.com
+First two servers belongs to the host 1 with DOMAIN : hostaddress1
 - localhost:8081
 - localhost:8082
 
-The following two servers belongs to the host www.hostadress2.com
+The following two servers belongs to the host 2 with DOMAIN: hostadress2
 - localhost:9081
 - localhost:9082
 
-The following server belongs to the host www.hostadress3.com
+The following server belongs to the host 3 with DOMAIN: hostadress3
 - localhost:8083
 
 The loadbalancer routes the request based on the host of the client request.
