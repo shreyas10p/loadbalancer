@@ -1,0 +1,10 @@
+hosts:
+  - host: www.hostaddress1.com              #HOST ADDRESS 1
+    servers:
+      - localhost:8081                      # SERVER 1
+  - host: www.hostaddress2.com              # HOST ADDRESS 2
+    servers:
+      - localhost:8082                      # SERVER 2
+  - host: www.hostaddress3.com              # HOST ADDRESS 3
+    servers:
+      - localhost:8083                       # SERVER 3

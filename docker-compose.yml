@@ -1,0 +1,28 @@
+version: '3.0'
+services:
+  server1:
+    image: server
+    build:
+        context: .
+        dockerfile: docker/server.development.dockerfile
+    command: python manage.py runserver 0.0.0.0:8000
+    environment:
+      - APP=server1
+    ports:
+      - "8081:8000"
+
+  server2:
+    image: server
+    command: python manage.py runserver 0.0.0.0:8000
+    environment:
+      - APP=server2
+    ports:
+      - "8082:8000"
+
+  server3:
+    image: server
+    command: python manage.py runserver 0.0.0.0:8000
+    environment:
+      - APP=server3
+    ports:
+      - "9081:8000"
