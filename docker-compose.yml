@@ -25,4 +25,20 @@ services:
     environment:
       - APP=server3
     ports:
+      - "8083:8000"
+
+  server4:
+    image: server
+    command: python manage.py runserver 0.0.0.0:8000
+    environment:
+      - APP=server4
+    ports:
       - "9081:8000"
+
+  server5:
+    image: server
+    command: python manage.py runserver 0.0.0.0:8000
+    environment:
+      - APP=server5
+    ports:
+      - "9082:8000"

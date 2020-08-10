@@ -1,5 +1,5 @@
 import yaml
-from server import Server
+from .server import Server
 
 def load_config(path):
     with open(path) as configuration_file:
