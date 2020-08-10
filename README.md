@@ -14,3 +14,10 @@ The following server belongs to the host www.hostadress3.com
 - localhost:8083
 
 The loadbalancer routes the request based on the host of the client request.
+
+USAGE:
+Use the following commands to build servers using docker.
+1. docker-compose build
+2. docker-compose up -d
+
+pytest module is used for testing.
