@@ -24,5 +24,5 @@ urlpatterns = [
     path('router/', apis.host_routing, name='router'),
     path('server1/', apis.server1_path, name='server1-url'),
     path('server2/',apis.server2_path,name='server2-url'),
-    path('/healthcheck',app.healthcheck,name="healthcheck")
+    path('/healthcheck',app.healthres,name="healthcheck")
 ]

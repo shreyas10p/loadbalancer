@@ -19,9 +19,9 @@ def host_routing(request):
         if(header == entry['host']):
             healthy_server = get_healthy_server(header,updated_reg)
             if(healthy_server):
-                healthy_server._requestCount += 1
+                healthy_server._allowedRequests -= 1
                 res = requests.get('http://{}'.format(healthy_server._url))
-                healthy_server._requestCount -= 1
+                healthy_server._allowedRequests += 1
                 result = json.loads(res.content.decode('utf-8'))
                 return JsonResponse({'status_code':200,'content':result})
             return JsonResponse({'status_code':503,'content':'No Server Available'})
@@ -43,6 +43,7 @@ def server3_path(request):
     res = requests.get('http://{}'.format(SERVER_3))
     result = json.loads(res.content.decode('utf-8'))
     return JsonResponse({'status_code':res.status_code,'content':result})
+
 
 
 

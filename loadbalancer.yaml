@@ -1,12 +1,17 @@
 hosts:
   - host: www.hostaddress1.com              #HOST ADDRESS 1
     servers:
-      - localhost:8081                       # SERVER 1 - HOST 1
-      - localhost:8082                       # SERVER 2 - HOST 1
+      - name: localhost:8081                # SERVER 1 - HOST 1
+        priority: 1
+      - name: localhost:8082
+        priority: 2                     # SERVER 2 - HOST 1
   - host: www.hostaddress2.com              # HOST ADDRESS 2
     servers:
-      - localhost:9081                      # SERVER 1 - HOST 2
-      - localhost:9082                      # SERVER 2 - HOST 2
+      - name: localhost:9081                # SERVER 1 - HOST 2
+        priority: 1
+      - name: localhost:9082
+        priority: 2                      # SERVER 2 - HOST 2
   - host: www.hostaddress3.com              # HOST ADDRESS 3
     servers:
-      - localhost:8083                      # SERVER 1 - HOST 1
+      - name: localhost:8083                      # SERVER 1 - HOST 1
+        priority: 1

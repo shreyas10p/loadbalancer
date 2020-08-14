@@ -10,7 +10,7 @@ def load_config(path):
 def server_from_config(config):
     server_dict = {}
     for entry in config.get('hosts',[]):
-        server_dict[entry['host']]= [Server(server_name) for server_name in entry['servers']]
+        server_dict[entry['host']]= [Server(server_name['name'],server_name['priority']) for server_name in entry['servers']]
     return server_dict
 
 
@@ -22,8 +22,8 @@ def healthcheck(register):
 
 
 def get_healthy_server(host,server_dict):
-    if(server_dict[host][0]):
-        return server_dict[host][0]
-    else:
-        return False
+    for server in server_dict[host]:
+        if(server._allowedRequests>0):
+            return server
+    return False
 
