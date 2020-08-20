@@ -1,6 +1,6 @@
-##DJANGO BASED LOAD BALANCER
+## DJANGO BASED LOAD BALANCER
 
-##REQUIREMENTS:
+## REQUIREMENTS:
 - DOCKER
 - DJANGO
 
@@ -20,7 +20,7 @@ The following server belongs to the host 3 with DOMAIN: hostadress3
 - localhost:8083
 
 
-##USAGE:
+## USAGE:
 Use the following commands to build servers using docker.
 1. docker-compose build
 2. docker-compose up -d
@@ -28,11 +28,11 @@ Use the following commands to build servers using docker.
 pytest module is used for testing.
 
 
-##Features:
+## Features:
  - The loadbalancer routes the request based on the host of the client request.
  - The loadbalancer allows 2 requests per server and if multiple requests are on the server loadbalancer redirects request based on the priority of the server. Also each server is allowed at most 2 requests at a time.
  
- ##Contributing
+ ## Contributing
  
  Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
